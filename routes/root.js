@@ -83,6 +83,13 @@ router.get('/en/*', (req, res) => {
 router.get('/en', (req, res) => {
   res.redirect("/t/end");
 });
+router.get('/ru/*', (req, res) => {
+  res.redirect("/t/ru");
+});
+
+router.get('/ru', (req, res) => {
+  res.redirect("/t/ru");
+});
 
 router.get('/account', (req, res) => {
   res.render('spacedeck');
