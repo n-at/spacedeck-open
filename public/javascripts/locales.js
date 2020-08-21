@@ -3,6 +3,7 @@ window.locales.en = {};
 window.locales.de = {};
 window.locales.fr = {};
 window.locales.oc = {};
+window.locales.ru = {};
 window.locales.en.translation = 
 {
 	"ok": "OK",

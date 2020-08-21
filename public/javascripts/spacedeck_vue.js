@@ -118,11 +118,11 @@ function boot_spacedeck() {
     methods: methods
   });
 
-  var lang = "en";
+  var lang = "ru";
 
   window.refreshLocale = function() {
     if (spacedeck && spacedeck.user && spacedeck.user.preferences) {
-      lang = spacedeck.user.preferences.language || "en";
+      lang = spacedeck.user.preferences.language || "ru";
     } else if (window.browser_lang) {
       lang = window.browser_lang;
     }

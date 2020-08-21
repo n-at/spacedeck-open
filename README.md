@@ -3,3 +3,4 @@
 Changes:
 
 * PostgreSQL support
+* Russian language (default)

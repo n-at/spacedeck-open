@@ -93,8 +93,11 @@
 
     <div class="collapse" v-bind:class="{in:account=='language'}">
       <div class="modal-section">
-        <label class="radio" v-bind:class="{checked
-        : user.prefs_language=='en'}" v-on:click="save_user_language('en')">
+        <label class="radio" v-bind:class="{checked: user.prefs_language=='ru'}" v-on:click="save_user_language('ru')">
+          <input type="radio" id="user-preferences_language" name="language" value="ru"><span>Русский</span>
+        </label>
+        <hr/>
+        <label class="radio" v-bind:class="{checked: user.prefs_language=='en'}" v-on:click="save_user_language('en')">
           <input type="radio" id="user-preferences_language" name="language" value="en"><span>English</span>
         </label>
         <hr/>
