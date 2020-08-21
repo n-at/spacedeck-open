@@ -12,6 +12,15 @@
   "storage_local_path": "./storage",
   "storage_local_db": "./database.sqlite",
 
+  "db": {
+    "dialect": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "database": "spacedeck",
+    "username": "spacedeck",
+    "password": "spacedeck"
+  },
+
   "redis_mock": true,
   "mongodb_host": "localhost",
   "redis_host": "localhost",

@@ -5,25 +5,20 @@ function sequel_log(a,b,c) {
   console.log(a);
 }
 
-const Sequelize = require('sequelize');
-const sequelize = new Sequelize('database', 'username', 'password', {
-  host: 'localhost',
-  dialect: 'sqlite',
-
+const defaultDbConfig = {
   pool: {
     max: 5,
     min: 0,
     acquire: 30000,
     idle: 10000
   },
-
-  // SQLite only
-  storage: config.get('storage_local_db'),
   logging: sequel_log,
-
   // http://docs.sequelizejs.com/manual/tutorial/querying.html#operators
   operatorsAliases: false
-});
+};
+
+const Sequelize = require('sequelize');
+const sequelize = new Sequelize(Object.assign({}, defaultDbConfig, config.get('db')));
 
 var User;
 var Session;
@@ -175,7 +170,7 @@ module.exports = {
     crop_w: Sequelize.INTEGER,
     crop_h: Sequelize.INTEGER,
     shape: Sequelize.STRING,
-    shape_svg: Sequelize.STRING,
+    shape_svg: Sequelize.TEXT,
     padding_left: Sequelize.INTEGER,
     padding_right: Sequelize.INTEGER,
     padding_top: Sequelize.INTEGER,
