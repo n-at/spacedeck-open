@@ -217,49 +217,56 @@ module.exports = {
       foreignKey: {
         name: 'creator_id'
       },
-      as: 'creator'
+      as: 'creator',
+      onDelete: 'cascade'
     });
 
     Membership.belongsTo(User, {
       foreignKey: {
         name: 'user_id'
       },
-      as: 'user'
+      as: 'user',
+      onDelete: 'cascade'
     });
 
     Membership.belongsTo(Space, {
       foreignKey: {
         name: 'space_id'
       },
-      as: 'space'
+      as: 'space',
+      onDelete: 'cascade'
     });
 
     Artifact.belongsTo(User, {
       foreignKey: {
         name: 'user_id'
       },
-      as: 'user'
+      as: 'user',
+      onDelete: 'cascade'
     });
 
     Artifact.belongsTo(Space, {
       foreignKey: {
         name: 'space_id'
       },
-      as: 'space'
+      as: 'space',
+      onDelete: 'cascade'
     });
 
     Message.belongsTo(User, {
       foreignKey: {
         name: 'user_id'
       },
-      as: 'user'
+      as: 'user',
+      onDelete: 'cascade'
     });
 
     Message.belongsTo(Space, {
       foreignKey: {
         name: 'space_id'
       },
-      as: 'space'
+      as: 'space',
+      onDelete: 'cascade'
     });
 
     await sequelize.sync();
